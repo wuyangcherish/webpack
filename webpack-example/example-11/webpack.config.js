@@ -21,7 +21,7 @@ module.exports = {
 		extensions: ["", ".js", ".jsx", ".css", ".json"],
 	},
 	devServer: {
-      // publicPath: "/static/",
+      // publicPath: "/static/",I
       stats: { colors: true },
       port: 8080,
       contentBase: 'build',
@@ -31,7 +31,7 @@ module.exports = {
 
 /*
 	devServer: 运行 webpack-dev-server 的时候带的一系列参数都可以放到这里面维护
-		1. publicPath: 输出路径
+		1. publicPath: 公共路径或者CDN 
 		2. contentBase: 静态资源的目录 默认是当前路径
 		3. hot: 自动刷新？ true: false;
 	resolve:
