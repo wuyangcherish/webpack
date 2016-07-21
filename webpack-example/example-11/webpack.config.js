@@ -1,7 +1,8 @@
 var path = require("path");
 
-//var pathToReact = path.join(__dirname, './node_modules/react/dist/react.js');
-//var pathToReactDOM = path.join(__dirname, './node_modules/react-dom/dist/react-dom.js');
+var pathToReact = path.join(__dirname, './node_modules/react/dist/react.js');
+var pathToReactDOM = path.join(__dirname, './node_modules/react-dom/dist/react-dom.js');
+
 var entryPath = path.resolve(__dirname, 'src/index.js');
 var buildPath = path.resolve(__dirname, "build");
 
@@ -10,7 +11,7 @@ module.exports = {
 	output:{
 		path:"./src/index.js",
 		filename: 'bundle.js',
-		publicPath:'/static/'
+		// publicPath:'/static/'
 	},
 	module:{
 		loaders:[
@@ -19,6 +20,10 @@ module.exports = {
 	},
 	resolve:{
 		extensions: ["", ".js", ".jsx", ".css", ".json"],
+		alias:{
+			'react': pathToReact,
+			'react-dom': pathToReactDOM
+		}
 	},
 	devServer: {
       // publicPath: "/static/",I
@@ -26,7 +31,8 @@ module.exports = {
       port: 8080,
       contentBase: 'build',
       inline: true
-     }
+     },
+     noParse:[pathToReact, pathToReactDOM]
 }
 
 /*
