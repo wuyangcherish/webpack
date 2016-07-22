@@ -31,7 +31,8 @@
 		* 小伙伴给我找的两篇文章:
 			1. [webpack配置解释](https://segmentfault.com/a/1190000002889630)
 			2. [webpack配置解释](http://www.cnblogs.com/dh-dh/p/5165372.html)
-	7. 又出现一个问题：当我使用npm run dev 运行example-12的例子的时候显示的是<code>content is served from /xxx/xxx/Desktop/webpack/webpack-example</code> 然后显示的就是根目录 如果我想进入example-12 的话还得点进去 然后才可以看到结果~  
+	7. 又出现一个问题：当我使用npm run dev 运行example-12的例子的时候显示的是<code>content is served from /xxx/xxx/Desktop/webpack/webpack-example</code> 然后显示的就是根目录 如下图所示：![contentBase](http://7xlqb6.com1.z0.glb.clouddn.com/contentBase.png)
+	如果我想进入example-12 的话还得点进去 然后才可以看到结果~  
 		* 问题： “ContentBase” 的设置问题
 		* 解决方案：默认查找的是index.html 所以如果index.html在运行的文件夹下面的话那么就不用写<code>contentBase</code>如果是在里面的文件夹下面则：<code>contentBase: "build"</code>这种形式 PS: build 只是个例子。
 
