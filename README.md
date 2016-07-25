@@ -35,5 +35,8 @@
 	如果我想进入example-12 的话还得点进去 然后才可以看到结果~  
 		* 问题： “ContentBase” 的设置问题
 		* 解决方案：默认查找的是index.html 所以如果index.html在运行的文件夹下面的话那么就不用写<code>contentBase</code>如果是在里面的文件夹下面则：<code>contentBase: "build"</code>这种形式 PS: build 只是个例子。
+	8. 有关自动刷新的问题，webpack-dev-server 有两种模式支持自动刷新：
+		* 贴链接就OK了。[自动刷新模式](http://guoyongfeng.github.io/idoc/html/React%E8%AF%BE%E7%A8%8B%E4%B8%93%E9%A2%98/%E4%BD%BF%E7%94%A8Webpack%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E6%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81.html) 
+		* PS: 模块的热替换和组件级热更新都是上面链接中提到的。
 
 		
