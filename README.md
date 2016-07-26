@@ -7,6 +7,7 @@
 * webpack
 	1. [官方教程](http://webpack.github.io/docs/usage.html)
 	2. [阮一峰demo](https://github.com/ruanyf/webpack-demos)
+	3. [webpack 资源合集](https://github.com/naraku666/webpack-tutorial-collection)
 
 * ES6 
 
@@ -38,5 +39,7 @@
 	8. 有关自动刷新的问题，webpack-dev-server 有两种模式支持自动刷新：
 		* 贴链接就OK了。[自动刷新模式](http://guoyongfeng.github.io/idoc/html/React%E8%AF%BE%E7%A8%8B%E4%B8%93%E9%A2%98/%E4%BD%BF%E7%94%A8Webpack%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E6%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81.html) 
 		* PS: 模块的热替换和组件级热更新都是上面链接中提到的。
-
+		* 运行<code>$ webpack-dev-server</code>然后出现 dev-server.js:62Uncaught Error: [HMR] Hot Module Replacement is disabled.的问题：
+			* <font color="red">解决ing~</font>
+		
 		
