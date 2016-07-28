@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node auto/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,10 +22,14 @@
     "mockjs": "^1.0.1-beta2",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "reload": "^1.0.1",
     "style-loader": "^0.13.1",
+    "supervisor": "^0.11.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.2"
   },
   "dependencies": {
     "babel-polyfill": "^6.9.1",
