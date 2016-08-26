@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.main2.js","sources":["webpack:///./src/main2.js"],"sourcesContent":["import a from './a';\nimport c from './c';\n\ndocument.write('我引用了 a c 文件');\ndocument.write(a);\ndocument.write(c);\n\n\n/** WEBPACK FOOTER **\n ** ./src/main2.js\n **/"],"mappings":";;;;;;;;AAAA;AACA;;;AAAA;AACA;;;;;AACA;AACA;AACA;AACA;;;;;","sourceRoot":""}

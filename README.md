@@ -5,7 +5,7 @@
 ###### Babel
 
 1. [阮一峰 Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)
-
+2. [有关babel插件的解释](https://www.zfanw.com/blog/babel-6.html)
 
 ###### webpack
 
