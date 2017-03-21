@@ -1,13 +1,13 @@
-## Webpack
+# Webpack
 
-### 资料
+## 资料
 
-###### Babel
+### Babel
 
 1. [阮一峰 Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)
 2. [有关babel插件的解释](https://www.zfanw.com/blog/babel-6.html)
 
-###### webpack
+### webpack
 
 1. [官方教程](http://webpack.github.io/docs/usage.html)
 2. [阮一峰demo](https://github.com/ruanyf/webpack-demos)
@@ -15,22 +15,42 @@
 4. [webpack中文文档](https://chenyiqiao.gitbooks.io/webpack/content/motivation_of_webpack.html)
 5. [webpack+express 全栈刷新](http://acgtofe.com/posts/2016/02/full-live-reload-for-express-with-webpack)
 
-###### ES6 
+### ES6 
 
 1. [阮一峰教程](http://es6.ruanyifeng.com/)
 
-###### webpack 插件
+### webpack plugins
 
 1. CommonChunksLoader --- 用来提取公共模块的 
 	
 用法：在plugins 里面加入：
-<code>new  webpack.optimize.CommonsChunkPlugin('common.js', ['main1', 'main2'])文件</code>
+
+```
+new  webpack.optimize.CommonsChunkPlugin('common.js', ['main1', 'main2'])文件
+```
 
 其中 common.js 是抽取出来的公共的部分， main1 main2 是多入口文件的文件名
 
 
+2. open-browser-webpack-plugin 插件
 
-#### Issue 
+这个插件可以在webpack 打包完毕后自动打开浏览器而不需要自己输入``localhost:xxxx`` 等等，
+
+配置情况是 下载该插件 然后在weboack.config.js 中引入该插件
+
+```
+var openBrowserWebpackPlugin = require('open-browser-webpack-plugin');
+
+.....
+
+plugins:[
+		new openBrowserWebpackPlugin({ url: 'http://localhost:8080' })
+	],
+```
+
+这样配置即可
+
+## Issue 
 
 1. [Unknown option: …/.babelrc.presets](http://stackoverflow.com/questions/33685365/unknown-option-babelrc-presets)
 
@@ -57,5 +77,9 @@
 	* 贴链接就OK了。[自动刷新模式](http://guoyongfeng.github.io/idoc/html/React%E8%AF%BE%E7%A8%8B%E4%B8%93%E9%A2%98/%E4%BD%BF%E7%94%A8Webpack%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E6%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81.html) 
 	* PS: 模块的热替换和组件级热更新都是上面链接中提到的。
 	* 一般上述条件做的话就是只刷新html 文件，但是在我们开发中需要刷新的一般不是index.html 也许是css 也许是jsx，所以要实现实时刷新的效果一般的方法是在<code>React/</code>下面的<code>refresh-real-time</code>文件下面写的哪两种方法。
+
+	
+	
+	
 		
 		
