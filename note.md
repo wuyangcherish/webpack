@@ -26,6 +26,16 @@ publicPath: "https://cdn.example.com/assets"
 
 例子【CommonChunks-demo】所示
 
+**<font color="red">切记：在页面上引入js文件的时候一定要是公共文件在上面，其次才是其他的文件，不然会报错</font>**
+
+* 插件 extract-text-webpack-plugin 是防止某个css 文件和 javascript 文件打包在一起
+> 为了用 webpack 对 CSS 文件进行打包，你可以像其它模块一样将 CSS 引入到你的 JavaScript 代码中，同时用 css-loader (像 JS 模块一样输出 CSS)，也可以选择使用 ExtractTextWebpackPlugin (将打好包的 CSS 提出出来并输出成 CSS 文件)
+
+
+
+
+
+ 
 
 
 

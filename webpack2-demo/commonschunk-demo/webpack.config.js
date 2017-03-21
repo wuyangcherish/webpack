@@ -7,7 +7,7 @@ const config = {
 		vendor: 'moment'
 	},
 	output: {
-		filename: '[chunkhash].[name].js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	plugins: [
