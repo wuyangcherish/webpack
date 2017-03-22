@@ -32,6 +32,24 @@ publicPath: "https://cdn.example.com/assets"
 > 为了用 webpack 对 CSS 文件进行打包，你可以像其它模块一样将 CSS 引入到你的 JavaScript 代码中，同时用 css-loader (像 JS 模块一样输出 CSS)，也可以选择使用 ExtractTextWebpackPlugin (将打好包的 CSS 提出出来并输出成 CSS 文件)
 
 
+* webpack 通过输出占位符【一个唯一的哈希值】来构成文件名，这样当文件更新的时候就会重新生成一个哈希值，来防止缓存的问题
+
+**[hash] && [chunkhash]**
+
+用 [hash] 构建的话，有一个问题就是无论哪个文件更改了，都会更新所有文件的文件名，然后客户端就必须重新下载代码。浪费流量
+
+所以会用到 [chunkhash] 来根据内容生成哈希值。
+
+在页面上引用js文件
+
+生成的 stats.json 文件中有很多的属性，可以直接用[webpack-manifest-plugin](https://www.npmjs.com/package/webpack-manifest-plugin) 这个插件来得到hash之后的文件名
+
+
+
+
+
+
+
 
 
 
