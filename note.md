@@ -44,6 +44,57 @@ publicPath: "https://cdn.example.com/assets"
 
 生成的 stats.json 文件中有很多的属性，可以直接用[webpack-manifest-plugin](https://www.npmjs.com/package/webpack-manifest-plugin) 这个插件来得到hash之后的文件名
 
+* webpack-manifest-plugin 用法
+
+**用法**
+
+```
+	var ManifestPlugin = require('webpack-manifest-plugin')
+	
+	//plugins 里面实例化：
+	new ManifestPlugin()
+```
+
+在 Vue 中，默认build 之后生成的所有文件都在 ``dist/`` 目录下面，所以实例化之后 build 生成的 **manifest.json**会生成在这个目录下面
+
+build 之后就会发现dist 文件目录下面多了一个 manifest.json 的文件
+
+默认文件的路径是从这个 ``manifest.json`` 的文件来看的一个相对路径，可以通过 参数**publicPath** 来修改这个
+
+**参数**
+
+``fileName`` : 生成这个的 manifest文件的文件名
+
+``basePath``: 是在生成的每个文件的文件名前面加上一个路径前缀，比如 设置 ``basePath:'dist'`` 这个属性之后 **main.css**  在manifest.json 中的文件名会显示成 
+```
+	{
+		"dist/main.css" :"static/css/main.[hash].css"
+	}
+```
+
+``publicPath``: 这个属性是来在每个生成的文件的路径的前面，加上一个统一的路径前缀，如果同时设置了 **basePath** && **publicPath** 的话，它会被忽略
+
+例如下面生成的文件中 publicPath:'dist/' 就被忽略了
+
+```
+{
+  "build/app.css": "build/static/css/app.2fbc1542e57f593f561aa4f32b9868c7.css",
+  "build/app.css.map": "build/static/css/app.2fbc1542e57f593f561aa4f32b9868c7.css.map",
+  "build/app.js": "build/static/js/app.f5d8de741e0b9b2d4dc7.js",
+  "build/app.js.map": "build/static/js/app.f5d8de741e0b9b2d4dc7.js.map",
+  "build/manifest.js": "build/static/js/manifest.510cfe5b991186a5654c.js",
+  "build/manifest.js.map": "build/static/js/manifest.510cfe5b991186a5654c.js.map",
+  "build/vendor.js": "build/static/js/vendor.28270987fcda3a9ff17f.js",
+  "build/vendor.js.map": "build/static/js/vendor.28270987fcda3a9ff17f.js.map"
+}
+```
+
+
+
+
+
+
+
 
 
 
